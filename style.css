@@ -562,6 +562,7 @@ html {
   border-radius: 0.5rem;
   border-left: 3px solid var(--color-mauve);
   text-align: left;
+  transition: background-color var(--transition-speed) ease;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -673,7 +674,8 @@ html {
 
 @media (prefers-reduced-motion: no-preference) {
   .site-footer {
-    transition: background-color var(--transition-speed) ease;
+    transition: background-color var(--transition-speed) ease,
+                border-color var(--transition-speed) ease;
   }
 }
 
@@ -738,10 +740,6 @@ html {
 
   .section {
     padding: var(--space-10) var(--space-6);
-  }
-
-  .feature-grid {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .feature-card {
