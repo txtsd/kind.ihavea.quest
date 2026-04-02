@@ -50,6 +50,110 @@
         <a href="https://github.com/sponsors/txtsd" class="button button-secondary">sponsor</a>
       </div>
     </section>
+    <section id="why" class="section section-alt" aria-labelledby="why-heading">
+      <div class="section-inner">
+        <h2 id="why-heading" class="section-heading">why kind exists</h2>
+        <div class="prose">
+          <p>
+            the official Discord client is Electron. it wraps a browser around
+            a website and calls it an app. it uses hundreds of megabytes of
+            memory to do what a native application could do with a fraction
+            of that.
+          </p>
+          <p>
+            kind is built from scratch as a native application in C++ and Qt 6.
+            the difference is tangible. the UI loads instantly. on first launch,
+            things appear as fast as Discord's servers respond. on every launch
+            after that, everything comes from cache and is validated against the
+            network in the background. it feels as fast as opening a plaintext file.
+          </p>
+          <p>
+            kind targets Windows, macOS, and Linux.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="features" class="section" aria-labelledby="features-heading">
+      <div class="section-inner">
+        <h2 id="features-heading" class="section-heading">what's built</h2>
+        <ul class="feature-grid" role="list">
+          <li class="feature-card">
+            <h3 class="feature-title">gateway</h3>
+            <p>WebSocket connection to Discord with exponential backoff, automatic reconnect, and heartbeat management.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">REST</h3>
+            <p>full HTTP client with per-route rate limiting that respects Discord's rate limit headers.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">cache</h3>
+            <p>SQLite-backed persistent cache with async reads and writes. bulk loading takes the full database from disk to memory in around 110ms.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">permissions</h3>
+            <p>complete Discord permission resolution across roles, channels, and overwrites.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">message rendering</h3>
+            <p>composable block renderer that handles embeds, attachments, reactions, stickers, and interactive components.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">markdown</h3>
+            <p>full Discord-flavour markdown parser with support for all formatting, mentions, and custom emoji.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">image cache</h3>
+            <p>async image loading with memory LRU and disk persistence. images appear instantly on repeat views.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">unread state</h3>
+            <p>unread and mute tracking that persists across restarts and reconciles with Discord's server state.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">direct messages</h3>
+            <p>full 1-on-1 direct messaging with its own dedicated view and conversation list.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">370+ tests</h3>
+            <p>three-tier test suite covering core logic, GUI components, and full integration tests against a mock Discord server.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="scope" class="section section-alt" aria-labelledby="scope-heading">
+      <div class="section-inner">
+        <h2 id="scope-heading" class="section-heading">not in v1</h2>
+        <p class="scope-intro">these are intentionally deferred, not forgotten.</p>
+        <ul class="scope-list" role="list">
+          <li>voice</li>
+          <li>video</li>
+          <li>screenshare</li>
+          <li>Nitro features</li>
+        </ul>
+      </div>
+    </section>
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <h2 id="about-heading" class="section-heading">developer</h2>
+        <p class="developer-name">txtsd</p>
+        <p class="developer-bio">solo indie FOSS developer based in India.</p>
+        <ul class="developer-links" role="list">
+          <li><a href="https://github.com/txtsd">GitHub</a></li>
+          <li><a href="https://ihavea.quest">website</a></li>
+          <li><a href="https://github.com/sponsors/txtsd">sponsors</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-tagline">built with care, not Electron.</p>
+      <ul class="footer-links" role="list">
+        <li><a href="https://github.com/txtsd/kind">source</a></li>
+        <li><a href="https://github.com/sponsors/txtsd">sponsor</a></li>
+        <li><a href="https://ihavea.quest">ihavea.quest</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
