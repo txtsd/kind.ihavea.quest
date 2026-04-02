@@ -216,14 +216,35 @@ body::after {
 }
 
 .nav-links a {
+  position: relative;
   color: var(--color-subtext0);
   text-decoration: none;
   font-size: var(--font-size-sm);
+  padding-bottom: var(--space-1);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-mauve);
+}
+
+.nav-links a.active::after,
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .nav-links a {
     transition: color var(--transition-speed) ease;
+  }
+
+  .nav-links a::after {
+    transition: width var(--transition-speed) ease;
   }
 }
 
@@ -251,7 +272,12 @@ body::after {
 
 @media (prefers-reduced-motion: no-preference) {
   .theme-toggle {
-    transition: color var(--transition-speed) ease;
+    transition: color var(--transition-speed) ease,
+                transform var(--transition-speed) ease;
+  }
+
+  .theme-toggle:active {
+    transform: rotate(30deg);
   }
 }
 
@@ -398,7 +424,16 @@ html {
 @media (prefers-reduced-motion: no-preference) {
   .button {
     transition: background-color var(--transition-speed) ease,
-                color var(--transition-speed) ease;
+                color var(--transition-speed) ease,
+                transform var(--transition-speed) ease;
+  }
+
+  .button:hover {
+    transform: scale(1.02);
+  }
+
+  .button:active {
+    transform: scale(0.98);
   }
 }
 
