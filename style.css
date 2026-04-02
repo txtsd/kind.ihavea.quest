@@ -125,3 +125,118 @@ body {
                 background-color var(--transition-speed) ease;
   }
 }
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-mauve);
+  color: var(--color-base);
+  border-radius: 0.25rem;
+  z-index: 200;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* Site header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .site-header {
+    transition: background-color var(--transition-speed) ease;
+  }
+}
+
+.site-header.scrolled {
+  background-color: var(--color-mantle);
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-mauve);
+  text-decoration: none;
+}
+
+.nav-logo:focus-visible {
+  outline: 2px solid var(--color-mauve);
+  outline-offset: 2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: var(--color-subtext0);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav-links a {
+    transition: color var(--transition-speed) ease;
+  }
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-text);
+}
+
+.nav-links a:focus-visible {
+  outline: 2px solid var(--color-mauve);
+  outline-offset: 2px;
+}
+
+/* Theme toggle (styled but hidden until JS activates) */
+.theme-toggle {
+  background: none;
+  border: none;
+  padding: var(--space-2);
+  cursor: pointer;
+  color: var(--color-subtext0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .theme-toggle {
+    transition: color var(--transition-speed) ease;
+  }
+}
+
+.theme-toggle:hover {
+  color: var(--color-text);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-mauve);
+  outline-offset: 2px;
+}
