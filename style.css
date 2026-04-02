@@ -174,7 +174,9 @@ body::after {
 }
 
 .site-header.scrolled {
-  background-color: var(--color-mantle);
+  background-color: color-mix(in srgb, var(--color-mantle) 80%, transparent);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-surface0) 50%, transparent);
 }
 
 /* Navigation */
@@ -512,8 +514,16 @@ html {
 
 @media (prefers-reduced-motion: no-preference) {
   .feature-card {
-    transition: background-color var(--transition-speed) ease;
+    transition: background-color var(--transition-speed) ease,
+                transform var(--transition-speed) ease,
+                box-shadow var(--transition-speed) ease;
   }
+}
+
+.feature-card:hover {
+  background-color: var(--color-surface0);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-crust) 40%, transparent);
 }
 
 .feature-title {
