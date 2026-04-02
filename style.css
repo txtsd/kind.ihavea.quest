@@ -247,6 +247,26 @@ body {
   outline-offset: 2px;
 }
 
+/* Theme toggle icon visibility via CSS */
+[data-theme="dark"] .icon-moon,
+:root:not([data-theme]) .icon-moon {
+  display: none;
+}
+
+[data-theme="light"] .icon-sun {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) .icon-sun {
+    display: none;
+  }
+
+  :root:not([data-theme]) .icon-moon {
+    display: block;
+  }
+}
+
 html {
   scroll-padding-top: var(--space-8);
 }
@@ -545,7 +565,7 @@ html {
 }
 
 .footer-links a {
-  color: var(--color-overlay1);
+  color: var(--color-subtext0);
   text-decoration: none;
   font-size: var(--font-size-sm);
 }

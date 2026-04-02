@@ -7,8 +7,6 @@
   toggle.hidden = false;
 
   const STORAGE_KEY = 'kind-theme';
-  const sunIcon = toggle.querySelector('.icon-sun');
-  const moonIcon = toggle.querySelector('.icon-moon');
 
   function getPreferredTheme() {
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -22,10 +20,6 @@
       'aria-label',
       theme === 'dark' ? 'switch to light theme' : 'switch to dark theme'
     );
-    if (sunIcon && moonIcon) {
-      sunIcon.style.display = theme === 'dark' ? 'block' : 'none';
-      moonIcon.style.display = theme === 'light' ? 'block' : 'none';
-    }
   }
 
   applyTheme(getPreferredTheme());
@@ -67,24 +61,32 @@
 (function() {
   const navLinks = document.querySelectorAll('.nav-links a');
   const sections = document.querySelectorAll('section[id]');
+  const hero = document.querySelector('.hero');
   if (!navLinks.length || !sections.length) return;
 
   const observer = new IntersectionObserver(
     function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          navLinks.forEach(function(link) {
-            link.classList.toggle(
-              'active',
-              link.getAttribute('href') === '#' + entry.target.id
-            );
-          });
+          if (entry.target === hero) {
+            navLinks.forEach(function(link) {
+              link.classList.remove('active');
+            });
+          } else {
+            navLinks.forEach(function(link) {
+              link.classList.toggle(
+                'active',
+                link.getAttribute('href') === '#' + entry.target.id
+              );
+            });
+          }
         }
       });
     },
     { rootMargin: '-20% 0px -80% 0px' }
   );
 
+  if (hero) observer.observe(hero);
   sections.forEach(function(section) {
     observer.observe(section);
   });
