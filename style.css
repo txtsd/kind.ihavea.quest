@@ -746,3 +746,12 @@ html {
     padding: var(--space-6);
   }
 }
+
+/* 404 page */
+.error-page {
+  min-height: 100vh;
+}
+
+.error-code {
+  font-size: var(--font-size-4xl);
+}
