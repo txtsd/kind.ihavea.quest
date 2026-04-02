@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1e1e2e"/>
+  <circle cx="600" cy="280" r="300" fill="#cba6f7" opacity="0.04"/>
+  <text
+    x="600" y="270"
+    text-anchor="middle"
+    font-family="monospace"
+    font-weight="700"
+    font-size="120"
+    fill="#cba6f7"
+    letter-spacing="-2"
+  >kind</text>
+  <text
+    x="600" y="340"
+    text-anchor="middle"
+    font-family="monospace"
+    font-size="28"
+    fill="#a6adc8"
+  >kind is not discord</text>
+  <text
+    x="600" y="420"
+    text-anchor="middle"
+    font-family="sans-serif"
+    font-size="24"
+    fill="#bac2de"
+  >A native Discord client built from scratch in C++ and Qt.</text>
+  <text
+    x="600" y="460"
+    text-anchor="middle"
+    font-family="sans-serif"
+    font-size="24"
+    fill="#bac2de"
+  >No Electron. No compromise.</text>
+  <text
+    x="600" y="560"
+    text-anchor="middle"
+    font-family="monospace"
+    font-size="18"
+    fill="#585b70"
+  >kind.ihavea.quest</text>
+</svg>
