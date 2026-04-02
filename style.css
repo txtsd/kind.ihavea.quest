@@ -505,6 +505,7 @@ html {
 .section-inner {
   max-width: 64rem;
   margin: 0 auto;
+  text-align: center;
 }
 
 @media (min-width: 90em) {
@@ -522,6 +523,11 @@ html {
 }
 
 /* Prose */
+.prose {
+  text-align: left;
+  display: inline-block;
+}
+
 .prose p {
   color: var(--color-subtext1);
   line-height: 1.7;
@@ -551,6 +557,7 @@ html {
   background-color: var(--color-mantle);
   border-radius: 0.5rem;
   border-left: 3px solid var(--color-mauve);
+  text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -591,6 +598,7 @@ html {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-3);
 }
 
@@ -624,6 +632,7 @@ html {
 
 .developer-links {
   display: flex;
+  justify-content: center;
   gap: var(--space-5);
   list-style: none;
   margin-top: var(--space-5);
