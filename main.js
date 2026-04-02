@@ -43,3 +43,49 @@
     }
   });
 })();
+
+(function() {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  const sentinel = document.createElement('div');
+  sentinel.setAttribute('aria-hidden', 'true');
+  document.body.prepend(sentinel);
+
+  const observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        header.classList.toggle('scrolled', !entry.isIntersecting);
+      });
+    },
+    { threshold: 0 }
+  );
+
+  observer.observe(sentinel);
+})();
+
+(function() {
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = document.querySelectorAll('section[id]');
+  if (!navLinks.length || !sections.length) return;
+
+  const observer = new IntersectionObserver(
+    function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          navLinks.forEach(function(link) {
+            link.classList.toggle(
+              'active',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -80% 0px' }
+  );
+
+  sections.forEach(function(section) {
+    observer.observe(section);
+  });
+})();
