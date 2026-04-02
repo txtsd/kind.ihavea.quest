@@ -310,6 +310,10 @@ body::after {
   }
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 html {
   scroll-padding-top: var(--space-8);
 }
