@@ -503,8 +503,14 @@ html {
 }
 
 .section-inner {
-  max-width: 60rem;
+  max-width: 64rem;
   margin: 0 auto;
+}
+
+@media (min-width: 90em) {
+  .section-inner {
+    max-width: 76rem;
+  }
 }
 
 .section-heading {
@@ -658,8 +664,14 @@ html {
 }
 
 .footer-inner {
-  max-width: 60rem;
+  max-width: 64rem;
   margin: 0 auto;
+}
+
+@media (min-width: 90em) {
+  .footer-inner {
+    max-width: 76rem;
+  }
 }
 
 .footer-tagline {
@@ -711,6 +723,10 @@ html {
 
   .section {
     padding: var(--space-10) var(--space-6);
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .feature-card {
