@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kind.ihavea.quest/sitemap.xml
