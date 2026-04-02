@@ -528,14 +528,14 @@ html {
 
 /* Prose */
 .prose {
-  text-align: left;
-  display: inline-block;
+  text-align: center;
 }
 
 .prose p {
   color: var(--color-subtext1);
   line-height: 1.7;
   max-width: 42rem;
+  margin-inline: auto;
 }
 
 .prose p + p {
