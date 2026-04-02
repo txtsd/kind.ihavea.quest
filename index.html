@@ -88,57 +88,69 @@
         <h2 id="features-heading" class="section-heading">What's Built</h2>
         <ul class="feature-grid" role="list">
           <li class="feature-card">
-            <h3 class="feature-title">Gateway</h3>
-            <p>WebSocket connection to Discord with exponential backoff, automatic reconnect, and heartbeat management.</p>
+            <h3 class="feature-title">Authentication</h3>
+            <p>Email and password login with TOTP two-factor support. Bot token login. Tokens stored in your system keychain with automatic login on subsequent launches.</p>
           </li>
           <li class="feature-card">
-            <h3 class="feature-title">REST</h3>
-            <p>Full HTTP client with per-route rate limiting that respects Discord's rate limit headers.</p>
-          </li>
-          <li class="feature-card">
-            <h3 class="feature-title">Cache</h3>
-            <p>SQLite-backed persistent cache with async reads and writes. Bulk loading takes the full database from disk to memory in around 110ms.</p>
-          </li>
-          <li class="feature-card">
-            <h3 class="feature-title">Permissions</h3>
-            <p>Complete Discord permission resolution across roles, channels, and overwrites.</p>
-          </li>
-          <li class="feature-card">
-            <h3 class="feature-title">Message Rendering</h3>
-            <p>Composable block renderer that handles embeds, attachments, reactions, stickers, and interactive components.</p>
-          </li>
-          <li class="feature-card">
-            <h3 class="feature-title">Markdown</h3>
-            <p>Full Discord-flavour markdown parser with support for all formatting, mentions, and custom emoji.</p>
-          </li>
-          <li class="feature-card">
-            <h3 class="feature-title">Image Cache</h3>
-            <p>Async image loading with memory LRU and disk persistence. Images appear instantly on repeat views.</p>
-          </li>
-          <li class="feature-card">
-            <h3 class="feature-title">Unread State</h3>
-            <p>Unread and mute tracking that persists across restarts and reconciles with Discord's server state.</p>
+            <h3 class="feature-title">Guilds and Channels</h3>
+            <p>Full guild list with three display modes. Channels organized by category with collapse and expand. Locked channels hidden or indicated based on your permissions. Guild ordering pulled from your Discord settings.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Direct Messages</h3>
-            <p>Full 1-on-1 direct messaging with its own dedicated view and conversation list.</p>
+            <p>1-on-1 DM conversations with a dedicated view sorted by recency. Start new conversations with user search. Avatars throughout.</p>
           </li>
           <li class="feature-card">
-            <h3 class="feature-title">370+ tests</h3>
-            <p>Three-tier test suite covering core logic, GUI components, and full integration tests against a mock Discord server.</p>
+            <h3 class="feature-title">Message Display</h3>
+            <p>Every Discord message type rendered correctly: user messages, replies, system messages, and bot interactions. Full markdown with bold, italic, code blocks, spoilers, strikethrough, and links. @mentions resolved with theme-aware colours. Rich embeds, file attachments, reactions with custom emoji, stickers, and interactive component buttons.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">Message Sending</h3>
+            <p>Send text messages in any channel or DM. Toggle reactions on and off. Emoji shortcode resolution across all 5932 Discord shortcodes.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">Unread Tracking</h3>
+            <p>Per-channel unread counts and mention badges that persist across restarts. Reconciles with Discord's server state on connect, with qualifiers for exact, at-least, and unknown counts. Mute tracking at both guild and channel level. Configurable accent bars and badges. Read state marked based on scroll visibility with debounced acknowledgement.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">Image Pipeline</h3>
+            <p>Async image loading with memory LRU and disk persistence. Up to 6 concurrent downloads with CDN size optimization. Circular guild icons with initials fallback. User avatars in messages and the DM list.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">Performance</h3>
+            <p>READY payload parsed on a worker thread. Async database cache with bulk queries loads in around 110ms. Non-blocking auto-login with an instant window. Scroll wheel speed locking and position compensation for smooth rendering. Store observer batching to minimize UI updates.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">Infrastructure</h3>
+            <p>442 tests across three tiers. SQLite per-account caching. Full Discord permission algorithm. Rate limiting with per-route buckets. Gateway reconnection with session resume and exponential backoff. 8 filterable loggers at debug and trace levels.</p>
+          </li>
+          <li class="feature-card">
+            <h3 class="feature-title">Preferences</h3>
+            <p>Configurable edited indicator style, guild display mode, locked channel visibility, unread bar and badge toggles per channel, guild, and DM. Mention badge toggles with a choice of theme accent or Discord blue. DM list display mode.</p>
           </li>
         </ul>
       </div>
     </section>
     <section id="scope" class="section section-alt" aria-labelledby="scope-heading">
       <div class="section-inner">
-        <h2 id="scope-heading" class="section-heading">Not in v1</h2>
-        <p class="scope-intro">These are intentionally deferred, not forgotten.</p>
+        <h2 id="scope-heading" class="section-heading">Not Yet</h2>
+        <p class="scope-intro">Intentionally deferred, not forgotten.</p>
         <ul class="scope-list" role="list">
-          <li>Voice</li>
-          <li>Video</li>
+          <li>Voice and video</li>
           <li>Screenshare</li>
-          <li>Nitro features</li>
+          <li>Message editing and deletion</li>
+          <li>File uploads</li>
+          <li>Slash commands</li>
+          <li>Emoji picker</li>
+          <li>Context menus</li>
+          <li>Message search</li>
+          <li>Member list</li>
+          <li>Typing indicators</li>
+          <li>User presence</li>
+          <li>Threads</li>
+          <li>Group DMs</li>
+          <li>Guild management</li>
+          <li>System notifications</li>
+          <li>System tray</li>
         </ul>
       </div>
     </section>
