@@ -1,7 +1,127 @@
+:root {
+  /* Catppuccin Mocha */
+  --color-base: #1e1e2e;
+  --color-mantle: #181825;
+  --color-crust: #11111b;
+  --color-surface0: #313244;
+  --color-surface1: #45475a;
+  --color-surface2: #585b70;
+  --color-overlay0: #6c7086;
+  --color-overlay1: #7f849c;
+  --color-text: #cdd6f4;
+  --color-subtext0: #a6adc8;
+  --color-subtext1: #bac2de;
+  --color-mauve: #cba6f7;
+  --color-lavender: #b4befe;
+  --color-red: #f38ba8;
+  --color-peach: #fab387;
+  --color-green: #a6e3a1;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* Typography */
+  --font-body: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+
+  /* Transitions */
+  --transition-speed: 200ms;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-base: #eff1f5;
+    --color-mantle: #e6e9ef;
+    --color-crust: #dce0e8;
+    --color-surface0: #ccd0da;
+    --color-surface1: #bcc0cc;
+    --color-surface2: #acb0be;
+    --color-overlay0: #9ca0b0;
+    --color-overlay1: #8c8fa1;
+    --color-text: #4c4f69;
+    --color-subtext0: #6c6f85;
+    --color-subtext1: #5c5f77;
+    --color-mauve: #8839ef;
+    --color-lavender: #7287fd;
+    --color-red: #d20f39;
+    --color-peach: #fe640b;
+    --color-green: #40a02b;
+  }
+}
+
+[data-theme="light"] {
+  --color-base: #eff1f5;
+  --color-mantle: #e6e9ef;
+  --color-crust: #dce0e8;
+  --color-surface0: #ccd0da;
+  --color-surface1: #bcc0cc;
+  --color-surface2: #acb0be;
+  --color-overlay0: #9ca0b0;
+  --color-overlay1: #8c8fa1;
+  --color-text: #4c4f69;
+  --color-subtext0: #6c6f85;
+  --color-subtext1: #5c5f77;
+  --color-mauve: #8839ef;
+  --color-lavender: #7287fd;
+  --color-red: #d20f39;
+  --color-peach: #fe640b;
+  --color-green: #40a02b;
+}
+
+[data-theme="dark"] {
+  --color-base: #1e1e2e;
+  --color-mantle: #181825;
+  --color-crust: #11111b;
+  --color-surface0: #313244;
+  --color-surface1: #45475a;
+  --color-surface2: #585b70;
+  --color-overlay0: #6c7086;
+  --color-overlay1: #7f849c;
+  --color-text: #cdd6f4;
+  --color-subtext0: #a6adc8;
+  --color-subtext1: #bac2de;
+  --color-mauve: #cba6f7;
+  --color-lavender: #b4befe;
+  --color-red: #f38ba8;
+  --color-peach: #fab387;
+  --color-green: #a6e3a1;
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-base);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    transition: color var(--transition-speed) ease,
+                background-color var(--transition-speed) ease;
+  }
 }
