@@ -18,7 +18,7 @@
     document.documentElement.setAttribute('data-theme', theme);
     toggle.setAttribute(
       'aria-label',
-      theme === 'dark' ? 'switch to light theme' : 'switch to dark theme'
+      theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
     );
   }
 
