@@ -121,13 +121,21 @@ document.documentElement.style.setProperty('--dpr', window.devicePixelRatio);
     }
   });
 
+  var isMobile = window.matchMedia('(max-width: 48em)');
+
   overlays.forEach(function(overlay) {
     var id = overlay.id;
     var trigger = document.querySelector('a[href="#' + id + '"]');
-    if (trigger) {
-      trigger.addEventListener('click', function() {
+    if (!trigger) return;
+
+    trigger.addEventListener('click', function(e) {
+      if (isMobile.matches) {
+        e.preventDefault();
+        var img = overlay.querySelector('img');
+        if (img) window.open(img.currentSrc || img.src, '_blank');
+      } else {
         lastTrigger = trigger;
-      });
-    }
+      }
+    });
   });
 })();
