@@ -101,9 +101,7 @@ document.documentElement.style.setProperty('--dpr', window.devicePixelRatio);
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && location.hash.startsWith('#ss-')) {
       e.preventDefault();
-      history.replaceState(null, '', location.pathname + '#screenshots');
-      var target = document.querySelector('#screenshots');
-      if (target) target.scrollIntoView();
+      location.hash = '#screenshots';
     }
   });
 
