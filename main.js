@@ -91,3 +91,43 @@
     observer.observe(section);
   });
 })();
+
+(function() {
+  var overlays = document.querySelectorAll('.screenshot-overlay');
+  if (!overlays.length) return;
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && location.hash.startsWith('#ss-')) {
+      e.preventDefault();
+      history.replaceState(null, '', location.pathname + '#screenshots');
+      var target = document.querySelector('#screenshots');
+      if (target) target.scrollIntoView();
+    }
+  });
+
+  var lastTrigger = null;
+
+  window.addEventListener('hashchange', function() {
+    var hash = location.hash;
+    if (hash.startsWith('#ss-')) {
+      var overlay = document.querySelector(hash);
+      if (overlay) {
+        var close = overlay.querySelector('.screenshot-close');
+        if (close) close.focus();
+      }
+    } else if (hash === '#screenshots' && lastTrigger) {
+      lastTrigger.focus();
+      lastTrigger = null;
+    }
+  });
+
+  overlays.forEach(function(overlay) {
+    var id = overlay.id;
+    var trigger = document.querySelector('a[href="#' + id + '"]');
+    if (trigger) {
+      trigger.addEventListener('click', function() {
+        lastTrigger = trigger;
+      });
+    }
+  });
+})();
