@@ -607,10 +607,14 @@ html {
   background-color: color-mix(in srgb, var(--color-crust) 92%, transparent);
 }
 
-.screenshot-overlay img {
+.screenshot-overlay picture {
   position: relative;
-  max-width: 100%;
-  max-height: 90vh;
+}
+
+.screenshot-overlay img {
+  display: block;
+  max-width: min(calc(100vw - 2 * var(--space-4)), calc(1920px / var(--dpr, 1)));
+  max-height: min(90vh, calc(1064px / var(--dpr, 1)));
   height: auto;
   box-shadow: 0 8px 32px color-mix(in srgb, var(--color-crust) 60%, transparent);
 }

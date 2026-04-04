@@ -1,5 +1,7 @@
 'use strict';
 
+document.documentElement.style.setProperty('--dpr', window.devicePixelRatio);
+
 (function() {
   const toggle = document.querySelector('.theme-toggle');
   if (!toggle) return;
