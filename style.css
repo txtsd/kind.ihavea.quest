@@ -580,6 +580,13 @@ html {
   outline-offset: 2px;
 }
 
+.screenshot-link img,
+.screenshot-overlay img {
+  font-family: var(--font-body);
+  font-size: var(--font-size-sm);
+  color: var(--color-subtext0);
+}
+
 .screenshot-link img {
   display: block;
   width: 100%;
