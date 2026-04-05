@@ -162,11 +162,11 @@
         <ul class="feature-grid" role="list">
           <li class="feature-card">
             <h3 class="feature-title">Authentication</h3>
-            <p>Email and password login with TOTP two-factor support. Bot token login. Tokens stored in your system keychain with automatic login on subsequent launches.</p>
+            <p>Token login with system keychain storage and automatic login on subsequent launches. Multiple account support with separate config, logs, and cache per account.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Guilds and Channels</h3>
-            <p>Full guild list with three display modes. Channels organized by category with collapse and expand. Locked channels hidden or indicated based on your permissions. Guild ordering pulled from your Discord settings.</p>
+            <p>Full guild list with icons, ordering from your Discord settings, and aggregated unread and mention counts. Channels organized by category with collapse, expand, position sorting, and permission-based visibility.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Direct Messages</h3>
@@ -174,31 +174,27 @@
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Message Display</h3>
-            <p>Every Discord message type rendered correctly: user messages, replies, system messages, and bot interactions. Full markdown with bold, italic, code blocks, spoilers, strikethrough, and links. @mentions resolved with theme-aware colours. Rich embeds, file attachments, reactions with custom emoji, stickers, and interactive component buttons.</p>
+            <p>Every Discord message type rendered correctly: user messages, replies, system messages, ephemeral messages, and bot interactions. Full markdown including bold, italic, code blocks, spoilers, quotes, strikethrough, underline, and links. @mentions resolved with theme-aware colours. Rich embeds, file attachments with image, video, and audio display. Reactions with custom emoji, stickers, and both V1 and V2 interactive components.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Message Sending</h3>
-            <p>Send text messages in any channel or DM. Toggle reactions on and off. Emoji shortcode resolution across all 5932 Discord shortcodes.</p>
+            <p>Send text messages in any channel or DM. Toggle reactions on and off. Emoji shortcode resolution across all Discord shortcodes. Incoming edits and deletes rendered in real time.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Unread Tracking</h3>
-            <p>Per-channel unread counts and mention badges that persist across restarts. Reconciles with Discord's server state on connect, with qualifiers for exact, at-least, and unknown counts. Mute tracking at both guild and channel level. Configurable accent bars and badges. Read state marked based on scroll visibility with debounced acknowledgement.</p>
-          </li>
-          <li class="feature-card">
-            <h3 class="feature-title">Image Pipeline</h3>
-            <p>Async image loading with memory LRU and disk persistence. Up to 6 concurrent downloads with CDN size optimization. Circular guild icons with initials fallback. User avatars in messages and the DM list.</p>
+            <p>Per-channel unread counts and mention badges that persist across restarts. Reconciles with Discord's server state on connect. Mute tracking at both guild and channel level. Configurable accent bars and badges. Jump pill for quick unread navigation.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Performance</h3>
-            <p>READY payload parsed on a worker thread. Async database cache with bulk queries loads in around 110ms. Non-blocking auto-login with an instant window. Scroll wheel speed locking and position compensation for smooth rendering. Store observer batching to minimize UI updates.</p>
+            <p>Viewport-prioritized image downloads with memory LRU and disk caching. SQLite per-account cache for messages and guilds. Multiple memory profiles from lean to generous. Scroll anchoring and smooth rendering across large message histories.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Infrastructure</h3>
-            <p>442 tests across three tiers. SQLite per-account caching. Full Discord permission algorithm. Rate limiting with per-route buckets. Gateway reconnection with session resume and exponential backoff. 8 filterable loggers at debug and trace levels.</p>
+            <p>Full Discord permission algorithm. Rate limiting with per-route buckets. Gateway reconnection with session resume and exponential backoff. Status bar with connection state.</p>
           </li>
           <li class="feature-card">
             <h3 class="feature-title">Preferences</h3>
-            <p>Configurable edited indicator style, guild display mode, locked channel visibility, unread bar and badge toggles per channel, guild, and DM. Mention badge toggles with a choice of theme accent or Discord blue. DM list display mode.</p>
+            <p>Configurable appearance, indicator styles, mention colours, timestamp display, and memory profiles. Unread bar and badge toggles per channel, guild, and DM. Choice of theme accent or Discord blue for mention badges.</p>
           </li>
         </ul>
       </div>
@@ -210,20 +206,23 @@
         <ul class="scope-list" role="list">
           <li>Voice and video</li>
           <li>Screenshare</li>
-          <li>Message editing and deletion</li>
+          <li>Sending edits and deletes</li>
           <li>File uploads</li>
           <li>Slash commands</li>
-          <li>Emoji picker</li>
           <li>Context menus</li>
           <li>Message search</li>
-          <li>Member list</li>
+          <li>Pinned messages</li>
           <li>Typing indicators</li>
           <li>User presence</li>
-          <li>Threads</li>
           <li>Group DMs</li>
-          <li>Guild management</li>
+          <li>Threads and forums</li>
+          <li>User profiles</li>
+          <li>Friend list</li>
+          <li>Server management</li>
           <li>System notifications</li>
           <li>System tray</li>
+          <li>Keyboard shortcuts</li>
+          <li>Custom themes</li>
         </ul>
       </div>
     </section>
