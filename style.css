@@ -542,6 +542,26 @@ html {
   margin-top: var(--space-4);
 }
 
+.prose a {
+  color: var(--color-mauve);
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .prose a {
+    transition: color var(--transition-speed) ease;
+  }
+}
+
+.prose a:hover {
+  color: var(--color-lavender);
+}
+
+.prose a:focus-visible {
+  outline: 2px solid var(--color-mauve);
+  outline-offset: 2px;
+}
+
 /* Screenshot grid */
 .screenshot-grid {
   display: grid;

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>On AI / kind</title>
+  <meta name="description" content="Why kind is built with AI assistance, and what that costs.">
+  <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://kind.ihavea.quest/on-ai/">
+  <meta property="og:title" content="On AI / kind">
+  <meta property="og:description" content="Why kind is built with AI assistance, and what that costs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kind.ihavea.quest/on-ai/">
+  <meta property="og:site_name" content="kind">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://kind.ihavea.quest/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="On AI / kind">
+  <meta name="twitter:description" content="Why kind is built with AI assistance, and what that costs.">
+  <meta name="twitter:image" content="https://kind.ihavea.quest/assets/images/og-image.png">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5.2.8/index.css" integrity="sha384-p+EgvS3+MmUG4ztXXPqzFtb7IwR4h5ljta/AfLhM0vj1rtoFd3fsPDFTy2+m+W5U" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/geist-mono@5.2.7/index.css" integrity="sha384-+vQW7zp7HknV1Hb+78y01bvnE+c/tci1UJL3SVVr3mh96Ff2muGpGQP/rI6QWmH7" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/main.js" defer></script>
+</head>
+<body>
+  <a href="#content" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav" aria-label="primary">
+      <a href="/" class="nav-logo">kind</a>
+      <ul class="nav-links" role="list">
+        <li><a href="/#why">Why</a></li>
+        <li><a href="/#screenshots">Screenshots</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/#scope">Scope</a></li>
+        <li><a href="/#about">About</a></li>
+      </ul>
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light theme"
+        hidden
+      >
+        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="10" cy="10" r="4"/>
+          <path d="M10 1.5v2M10 16.5v2M1.5 10h2M16.5 10h2M4 4l1.4 1.4M14.6 14.6L16 16M4 16l1.4-1.4M14.6 5.4L16 4"/>
+        </svg>
+        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17.2 13.1A7.5 7.5 0 0 1 6.9 2.8a7.5 7.5 0 1 0 10.3 10.3z"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <main id="content">
+    <section class="section" aria-labelledby="on-ai-heading">
+      <div class="section-inner">
+        <h1 id="on-ai-heading" class="section-heading">On AI</h1>
+        <div class="prose">
+          <p>
+            This project is built with AI assistance. All of it. I set the
+            architecture, make design decisions, define quality standards, and
+            evaluate the result. The AI writes code to a standard I enforce
+            through testing, MVC compliance, logging, and refusing to accept
+            anything that blocks the UI or cuts corners.
+          </p>
+          <p>
+            I am aware of the costs. AI infrastructure consumes water and
+            electricity at scales that hurt the common folk. Governments
+            subsidize power for data centers while household electricity bills
+            climb. Workers in the Global South are paid next to nothing to
+            produce training data under conditions that are frequently
+            unethical. The flood of generated slop is degrading every corner of
+            the Internet. I do not think these are acceptable tradeoffs and I do
+            not think the companies driving them are acting responsibly. I paid
+            one of them to help me build this.
+          </p>
+          <p>
+            I also could have spent this effort on something with cleaner
+            ethics. An XMPP client. An IRC client. The performant email client
+            that has been living in my head for years. Instead I built a Discord
+            client, a native frontend for a proprietary platform whose values I
+            do not share, because my communities are on Discord and I got tired
+            of watching Electron freeze every time I switched channels. That is
+            the whole reason. I wanted the thing I use every day to not be
+            miserable to use, and I wanted it before the window closes.
+          </p>
+          <p>
+            I cannot replace Discord as a service. I am one person. Building a
+            reliable live chat, voice, and streaming platform is orders of
+            magnitude more involved and more risky than building a native client
+            for an existing one. So I built the thing I could actually ship.
+          </p>
+          <p>
+            You can form your own opinion about whether any of that is worth it
+            by reading the <a href="https://github.com/txtsd/kind">source</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-tagline">Built with care, not Electron.</p>
+      <ul class="footer-links" role="list">
+        <li><a href="https://github.com/txtsd/kind">Source</a></li>
+        <li><a href="https://github.com/sponsors/txtsd">Sponsor</a></li>
+        <li><a href="https://ihavea.quest">ihavea.quest</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
